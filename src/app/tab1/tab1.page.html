@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      News
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,38 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">News</ion-title>
     </ion-toolbar>
   </ion-header>
+  <h1>News</h1>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+    <app-explore-container name="Tab 1 page*"></app-explore-container>
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-list>
+    <ion-item href="/detail/{{i}}" *ngFor="let item of items; let i = index">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{item.title}}
+      <div class="item-note" slot="end">
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list> -->
+<ion-list-header>Major Headlines</ion-list-header>
+  <ion-list>
+    <ion-item href="/detail/{{item.author}}/{{item.title}}/{{item.publishedAt}}/{{item.description}}/{{item.content}}/{{i}}" *ngFor="let item of articles; let i = index">
+      <!-- <ion-icon href='{{item.urlToImage}}' slot="start"></ion-icon> -->
+      <img style="width: 200px" src="{{item.urlToImage}}" slot="end">
+      <div class="item-title" slot="start">
+        {{item.title}}
+      </div>
+    </ion-item>
+  </ion-list>
+  </ion-content>

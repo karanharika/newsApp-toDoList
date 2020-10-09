@@ -26,6 +26,13 @@ const routes: Routes = [
       }
     ]
   },
+
+  {
+    path:'detail/:author/:title/:publishedAt/:description/:content/:index', 
+    loadChildren: () =>
+          import('../detail/detail.module').then(m => m.DetailPageModule) 
+  },
+
   {
     path: '',
     redirectTo: '/tabs/tab1',

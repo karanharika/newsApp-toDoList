@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{title}}</h1>
+
+  <div style="width: 80%; margin: auto; padding: 10px;" >
+  <label>By {{author}} | On {{date}}, at {{time}}</label> <br/> <br/>
+
+  <img style="display: block; margin-left: auto; margin-right: auto; width: 80%;" src="{{imageURL}}">
+
+  <!-- This is some news by {{author}}. Published At: {{publishedAt}} -->
+
+  <div>
+    <h4>Description:</h4>
+    {{description}}
+  </div>
+
+  <div>
+    <h4>Content:</h4>
+    {{content}}
+  </div>
+  <br/>
+  <a href="{{newsURL}}">Visit News Origin</a>
+  </div>
+
+
+</ion-content>
